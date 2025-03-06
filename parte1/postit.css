@@ -23,13 +23,14 @@ body {
   align-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  /* transition: scale 1s linear, rotate 1s linear; */
-  transition: all 0.5s linear;
+  transition: scale 1s linear, rotate 1s linear;
+  /* transition: all 0.5s linear; */
+  /* animation: falling 0.1s linear 1,change-color-circular 10s linear infinite; */
 }
 .post-it:hover {
   scale: 1.4;
   rotate: 0deg;
-  z-index: 1;
+  /* z-index: 1; */
   box-shadow: 0px 1px 15px 14px rgba(0, 0, 0, 0.6);
 }
 h2 {
@@ -41,6 +42,7 @@ p {
   font-style: italic;
   font-size: 18px;
   font-weight: 400;
+  /* animation: falling 0.1s linear 1 */
 }
 section {
   display: flex;
@@ -66,3 +68,40 @@ section {
 .negative-rotate {
   rotate: -5deg;
 }
+ @keyframes change-color-circular {
+    0%,100%{
+        /* background-color: #c9f9cb; */
+    
+    }
+    25%{
+        background-color: #ca4545;
+    }
+    50% {
+        background-color: fuchsia;
+    }
+    75%{background-color: rgb(0, 255, 55);}
+
+ }
+ .color-cicle{
+    animation: change-color-circular 5s linear 1;
+ }
+ .color-cicle-infinite{
+    animation: change-color-circular 5s linear infinite;
+ }
+ 
+ @keyframes falling {
+    0%{
+        transform: translateY(-400px);
+
+    }
+    100% {
+        transform: translateY(0px);
+    }
+
+    
+ }
+ .falling-text{
+    animation: falling 0.5s linear 1,change-color-circular 10s linear infinite;
+    
+    
+ }

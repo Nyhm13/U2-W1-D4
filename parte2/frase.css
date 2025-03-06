@@ -31,7 +31,7 @@ p {
 	text-shadow: 1px 1px 1px rgba(146, 146, 146, 0.8);
 }
 .parole{
-	text-indent: 10px; 
+	text-indent: 20px; 
 }
 .parole i{
 	position: absolute;
@@ -50,7 +50,7 @@ p {
 }
 .parole i:nth-child(3) { 
     -webkit-animation-delay: 4s; 
-	-ms-animation-delay: 4s; 
+	-ms-animation-delay: 4s;  
 	animation-delay: 4s; 
 	color: #6b739d;	
 }
